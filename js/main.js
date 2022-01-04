@@ -5,7 +5,11 @@ const app = Vue.createApp({
             productDescription : 'Téléphone très élégant',
             productPrice : 1000,
             productImage : '../assets/images/iphone-13-blue.png',
-            colors: ['red', 'blue', 'midnight'],
+            variants: [
+                { id: 1, color: '#437899', image: '../assets/images/iphone-13-blue.png' },
+                { id: 2, color: '#C01728', image: '../assets/images/iphone-13-red.png' },
+                { id: 3, color: '#262D34', image: '../assets/images/iphone-13-midnight.png' },
+            ],
             quantity: 30,
             inStock: true,
             cartCount: 0,
@@ -19,9 +23,8 @@ const app = Vue.createApp({
             this.cartCount += 1;
         },
         // update the product image when the color is changed with hover
-        updateProduct(color) {
-            hover = false;
-            this.productImage = '../assets/images/iphone-13-' + color + '.png';
+        updateImage(image) {
+            this.productImage = image;
         }
     }
 });

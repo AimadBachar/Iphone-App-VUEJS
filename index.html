@@ -35,9 +35,9 @@
                             {{ feature }}
                         </li>
                     </ul>
+                    <p>Choisir une couleur</p>
                     <ul>
-                        <li v-for="(color) in colors" v-bind:key="color" @mouseover="updateProduct(color)" @mouseleave="hover = false" v-bind:key="color" class="color">
-                            {{ color }}
+                        <li v-for="variant in variants" v-bind:key="variant.id" @mouseover="updateImage(variant.image)"  class="color" :style="{ backgroundColor: variant.color}">
                         </li>
                     </ul>
                     <button @click="addToCart" class="button">Add to cart</button>
