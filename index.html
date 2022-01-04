@@ -19,8 +19,6 @@
                 <div class="product-info">
                     <h1>{{ productName }}</h1>
                     <p>{{ productDescription }}</p>
-                    <p>{{ productPrice }} €</p>
-                    <p v-if="inStock">Quantité : {{ quantity }}</p>
                     <p v-if="quantity > 5">En stock</p>
                     <p v-else-if="quantity <= 5 && quantity > 0">En rupture de stock</p>
                     <p v-else>Plus de stock</p>

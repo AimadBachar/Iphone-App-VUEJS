@@ -19,30 +19,6 @@ const app = Vue.createApp({
                 {
                     name: 'Display',
                     value: '5.8 inch'
-                },
-                {
-                    name: 'Camera',
-                    value: '12 MP'
-                },
-                {
-                    name: 'Battery',
-                    value: '1420 mAh'
-                },
-                {
-                    name: 'Processor',
-                    value: 'Apple A13 Bionic'
-                },
-                {
-                    name: 'Memory',
-                    value: '64 GB'
-                },
-                {
-                    name: 'OS',
-                    value: 'iOS 13'
-                },
-                {
-                    name: 'Color',
-                    value: 'Blue'
                 }
             ],
         }
