@@ -5,8 +5,9 @@ const app = Vue.createApp({
             productDescription : 'Very elegant phone',
             productPrice : 1000,
             productImage : '../assets/images/iphone-13-blue.png',
-            quantity: 3,
+            quantity: 30,
             inStock: true,
+            cartCount: 0,
             features: [
                 {
                     name: 'Dimensions',
@@ -23,6 +24,14 @@ const app = Vue.createApp({
             ],
         }
         
+    },
+    methods: {
+        addToCart() {
+            this.cartCount += 1;
+        },
+        removeFromCart() {
+            this.cartCount -= 1;
+        }
     }
 });
 app.mount('#app');
