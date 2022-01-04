@@ -112,6 +112,10 @@ body {
   .product-info {
     width: 50%;
   }
+
+  .product-info__color{
+    display: flex;
+  }
   
   .review-zone {
     display: flex;
@@ -171,14 +175,11 @@ body {
   }
 
   .color {
-    width: 100px;
-    height: 10px;
-    margin-top: 8px;
-    padding: 0.1rem;
+    width: 25px;
+    height: 25px;
+    margin: 0 8px;
     border: 2px solid #d8d8d8;
-    border-radius: 5px;
-    text-transform: capitalize;
-    text-align: center;
+    border-radius: 50%;
   }
   
   @media only screen and (max-width: 600px) {
