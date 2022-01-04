@@ -1,8 +1,12 @@
 const app = Vue.createApp({
     data() {
         return {
-            name : 'Iphone 13',
-            price : 1000,
+            productName : 'Iphone 13',
+            productDescription : 'Very elegant phone',
+            productPrice : 1000,
+            productImage : '../assets/images/iphone-13-blue.png',
+            quantity: 3,
+            inStock: true,
         }
     }
 });
