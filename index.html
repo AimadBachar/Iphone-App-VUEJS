@@ -24,6 +24,12 @@
                     <p v-if="quantity > 5">En stock</p>
                     <p v-else-if="quantity <= 5 && quantity > 0">En rupture de stock</p>
                     <p v-else>Plus de stock</p>
+                    <p>Caractéristiques :</p>
+                    <ul>
+                        <li v-for="(feature) in features" v-bind:key="feature">
+                            {{ feature.name }} : {{ feature.value }}
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
