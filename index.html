@@ -32,7 +32,12 @@
                     <p>Caractéristiques :</p>
                     <ul>
                         <li v-for="(feature) in features" v-bind:key="feature">
-                            {{ feature.name }} : {{ feature.value }}
+                            {{ feature }}
+                        </li>
+                    </ul>
+                    <ul>
+                        <li v-for="(color) in colors" v-bind:key="color" @mouseover="updateProduct(color)" @mouseleave="hover = false" v-bind:key="color" class="color">
+                            {{ color }}
                         </li>
                     </ul>
                     <button @click="addToCart" class="button">Add to cart</button>

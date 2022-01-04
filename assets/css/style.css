@@ -169,6 +169,16 @@ body {
   ul {
     list-style-type: none;
   }
+
+  .color {
+    width: 100px;
+    margin-top: 8px;
+    padding: 0.1rem;
+    border: 2px solid #d8d8d8;
+    border-radius: 5px;
+    text-transform: capitalize;
+    text-align: center;
+  }
   
   @media only screen and (max-width: 600px) {
     .container {
