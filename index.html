@@ -11,8 +11,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="nav-bar">
-        </div>
+        <navbar-component></navbar-component>
         <div class="cart">
                 <i class="fas fa-shopping-cart">
                 </i>
@@ -26,8 +25,7 @@
                 <div class="product-info">
                     <h1>{{ productName }}</h1>
                     <p>{{ productDescription }}</p>
-                    <p v-if="quantity > 5">En stock</p>
-                    <p v-else-if="quantity <= 5 && quantity > 0">En rupture de stock</p>
+                    <p v-if="inStock">En stock</p>
                     <p v-else>Plus de stock</p>
                     <p>Caractéristiques :</p>
                     <ul>

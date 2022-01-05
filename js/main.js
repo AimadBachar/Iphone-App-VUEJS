@@ -38,4 +38,9 @@ const app = Vue.createApp({
         }
     }
 });
+app.component('navbar-component', {
+    template: `<div class="nav-bar">
+    </div>
+    `
+});
 app.mount('#app');
