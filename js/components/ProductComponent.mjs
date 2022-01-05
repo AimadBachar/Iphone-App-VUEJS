@@ -21,12 +21,11 @@ const productComponent = {
                         <li v-for="(variant, ind) in variants" v-bind:key="variant.id" @mouseover="activeVariant = ind"  class="color" :style="{ backgroundColor: variant.color}">
                         </li>
                     </ul>
-                    <button  @click="cart++" :disabled="!inStock" class="button" :class="{disabledButton: !inStock}">Add to cart</button>
+                    <button  @click="$emit('addToCart')" :disabled="!inStock" class="button" :class="{disabledButton: !inStock}">Add to cart</button>
                 </div>
             </div>
         </div>
     `,
-    props: ['cart'],
     data() {
         return {
             productName : 'Iphone 13',
