@@ -12,7 +12,7 @@ const app = Vue.createApp({
             ],
             // quantity: 50,
             // inStock: true,
-            cartCount: 0,
+            cart: 0,
             features: ['5G speed', 'Edge-to-edge OLED display', 'Ceramic Shield'],
             activeVariant: 0,
         }
@@ -27,10 +27,6 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        // add a product to cart
-        addToCart() {
-            this.cartCount += 1;
-        },
         // update the product image when the color is changed with hover
         updateImage(variant) {
             this.productImage = variant.image;
@@ -42,5 +38,15 @@ app.component('navbar-component', {
     template: `<div class="nav-bar">
     </div>
     `
+});
+app.component('cart-component', {
+    template: `
+    <div class="cart">
+        <i class="fas fa-shopping-cart">
+        </i>
+        <p>{{ cart }}</p>
+    </div>
+    `,
+    props: ['cart']
 });
 app.mount('#app');
